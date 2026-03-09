@@ -1,80 +1,53 @@
-<div class="cursor-container fixed top-0 left-0 w-full h-full pointer-events-none z-50">
-  <div class="cursor-follow absolute w-5 h-5 bg-black/50 dark:bg-white/50 rounded-full"></div>
+<div class="fixed inset-0 pointer-events-none [z-index:2147483647]">
+  <div class="absolute w-5 h-5 bg-black/50 dark:bg-white/50 rounded-full" style="transform: translate3d(-100px, -100px, 0);"></div>
 </div>
 
 <script>
-  const cursor = document.querySelector('.cursor-follow') as HTMLElement;
+  const cursor = document.querySelector('.fixed > div') as HTMLElement;
+  if (!cursor) throw new Error('Cursor element not found');
+
   let currentX = -100;
   let currentY = -100;
   let targetX = -100;
   let targetY = -100;
-
-  // Easing coefficient (0.0 to 1.0) - the smaller the smoother the follow
   const ease = 0.25;
 
-  document.addEventListener('mousemove', (e) => {
-    // Get the mouse position on the iframe
-    const iframe = e.target as HTMLElement;
-    if (iframe.tagName === 'IFRAME') {
-      const rect = iframe.getBoundingClientRect();
-      const offsetX = e.clientX - rect.left;
-      const offsetY = e.clientY - rect.top;
+  // メインウィンドウのマウス移動イベント
+  window.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
 
-      // Calculate the mouse position relative to the iframe
-      if (offsetX >= 0 && offsetX <= rect.width && offsetY >= 0 && offsetY <= rect.height) {
-        // Set the mouse position as the target position
-        targetX = e.clientX;
-        targetY = e.clientY;
+  // iframeからのメッセージを受信
+  window.addEventListener('message', (event) => {
+    // YouTubeドメインからのメッセージのみを受け入れる
+    if (event.origin.includes('youtube.com')) {
+      const { mouseX, mouseY } = event.data;
+      if (mouseX !== undefined && mouseY !== undefined) {
+        targetX = mouseX;
+        targetY = mouseY;
       }
-    } else {
-      // Set the mouse position as the target position
-      targetX = e.clientX;
-      targetY = e.clientY;
     }
   });
 
-  // Add event listener for iframe
-  const iframes = document.querySelectorAll('iframe');
-  iframes.forEach(iframe => {
-    iframe.style.pointerEvents = 'none';  // Disable pointer events on iframe
-
-    // Create an overlay on the iframe
-    const overlay = document.createElement('div');
-    overlay.style.position = 'absolute';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.zIndex = '1';
-    iframe.parentElement?.insertBefore(overlay, iframe);
-  });
-
   function updateCursorPosition() {
-    // Calculate the difference between the current position and the target position
     const dx = targetX - currentX;
     const dy = targetY - currentY;
 
-    // Update the current position with easing
     currentX += dx * ease;
     currentY += dy * ease;
 
-    // Update the cursor position
     cursor.style.transform = `translate3d(${currentX - 12.5}px, ${currentY - 12.5}px, 0)`;
-
-    // Request animation frame
     requestAnimationFrame(updateCursorPosition);
   }
 
-  // Only start animation if cursor element exists
-  if (cursor) {
-    updateCursorPosition();
-  }
+  updateCursorPosition();
 </script>
 
 <style>
- @media (hover: none) and (pointer: coarse) {
-   .cursor-follow {
-     display: none;
-   }
- }
+  @media (hover: none) and (pointer: coarse) {
+    .fixed > div {
+      display: none;
+    }
+  }
 </style>

@@ -33,10 +33,31 @@ We believe that if you can illuminate the hearts of your loved ones with your co
 
 ## Video
 
-<div>
+<div class="relative">
   <iframe
-    src="https://www.youtube.com/embed/yhqCw1QHQDY?si=rgN2qwUDTKoOxAa9"
+    src="https://www.youtube.com/embed/yhqCw1QHQDY?si=rgN2qwUDTKoOxAa9&enablejsapi=1"
     title="The memory room PV"
     class="w-full"
     style="border-radius: 30px; aspect-ratio: 16 / 9;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    id="youtube-player"
   ></iframe>
+  <script>
+    // iframeにマウスイベントリスナーを追加
+    const iframe = document.getElementById('youtube-player');
+    if (iframe) {
+      iframe.onload = () => {
+        iframe.contentWindow.postMessage(`
+          window.addEventListener('mousemove', (e) => {
+            const rect = e.target.getBoundingClientRect();
+            window.parent.postMessage({
+              mouseX: e.clientX + rect.left,
+              mouseY: e.clientY + rect.top
+            }, '*');
+          });
+        `, '*');
+      };
+    }
+  </script>
+</div>
