@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# MCP configuration (contains absolute paths)
+.mcp.json
+
+# Serena MCP
+.serena/
