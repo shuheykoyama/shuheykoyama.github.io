@@ -6,7 +6,7 @@ A sleek and modern portfolio website showcasing my professional journey, project
 
 ## 🚀 Live Demo
 
-Visit the live website: [shuheykoyama.com](http://shuheykoyama.com)
+Visit the live website: [shuheykoyama.github.io](http://shuheykoyama.github.io)
 
 ## ✨ Features
 
