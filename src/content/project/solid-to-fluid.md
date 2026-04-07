@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 title: solid to fluid
-img: /assets/images/projects/solid-to-fluid.webp
+img: ../../assets/images/projects/solid-to-fluid.webp
 img_alt: solid to fluid
 description: Hard objects have a texture that feels soft like fabric.
 dateFormatted: Feb 21st, 2023
@@ -12,7 +12,7 @@ tags:
   - Meshmixer
 ---
 
-![solid to fluid](/assets/images/projects/solid-to-fluid.webp)
+![solid to fluid](../../assets/images/projects/solid-to-fluid.webp)
 
 This sample was created by transforming the symbol mark of Kyoto Sangyo University FabSpace.
 Using the Vellum function of Houdini, a 3DCG software that specializes in fluid expression, a 3D model of the symbol covered with a cloth was created and fabricated on a dual-head 3D printer (Ultimaker 3 Extended).

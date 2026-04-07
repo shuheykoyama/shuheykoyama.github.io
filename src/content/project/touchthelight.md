@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 title: TouchTheLight
-img: /assets/images/projects/touchthelight.webp
+img: ../../assets/images/projects/touchthelight.webp
 img_alt: TouchTheLight
 description: The experience of riding the rhythm is converted into light to provide an interactive musical experience.
 dateFormatted: Feb 4th, 2021
@@ -12,7 +12,7 @@ tags:
   - Processing
 ---
 
-![TouchTheLight](/assets/images/projects/touchthelight.webp)
+![TouchTheLight](../../assets/images/projects/touchthelight.webp)
 
 Focusing on the experience of naturally getting into the rhythm of the body, such as tapping the rhythm with one's fingers while listening to music, this work adds an interactive visual experience to the conventional music experience by making LEDs blink in response to the movement of one's own fingers.
 This is the final product of the "Digital Fabrication" course offered in the fall semester of the Faculty of Information Science and Technology, Kyoto Sangyo University. [Won the Grand Prize in the 29th Kyoto Sangyo University Digital Contents Contest.](http://info.cse.kyoto-su.ac.jp/?page_id=9957)

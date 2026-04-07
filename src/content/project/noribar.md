@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 title: noribar
-img: /assets/images/projects/noribar.webp
+img: ../../assets/images/projects/noribar.webp
 img_alt: noribar
 description: A bus stop information service using AR.
 dateFormatted: Jan 13th, 2023
@@ -12,7 +12,7 @@ tags:
   - AR
 ---
 
-![noribar](/assets/images/projects/noribar.webp)
+![noribar](../../assets/images/projects/noribar.webp)
 
 In an environment where there are multiple bus stops with the same name, how can we make it easier to find the desired bus stop at a glance?
 The design concept of this service is to make it easy and stress-free to find the bus stop by using AR technology.

@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import { IoArrowForward } from "react-icons/io5";
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("project");
@@ -25,12 +27,10 @@ const sortedProjects = allProjects
   }))
   .sort((a, b) => a.date.getTime() - b.date.getTime());
 
-const projectsLoop = sortedProjects.slice(0, count).map((project) => {
-  return {
-    ...(project.data || {}),
-    link: `/project/${project.slug}`,
-  };
-});
+const projectsLoop = sortedProjects.slice(0, count).map((project) => ({
+  data: project.data,
+  link: `/project/${project.slug}`,
+}));
 ---
 
 {
@@ -43,34 +43,33 @@ const projectsLoop = sortedProjects.slice(0, count).map((project) => {
         <div class="absolute inset-0 z-20 w-full h-full duration-300 ease-out bg-white border border-dashed dark:bg-neutral-950 rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:-translate-x-1 group-hover:-translate-y-1" />
         <div class="absolute inset-0 z-10 w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1" />
         <div class="relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
-          <img
+          <Image
             class="border border-slate-300 dark:border-zinc-700 rounded-xl"
-            src={project.img}
-            alt={project.img_alt || ''}
+            src={project.data.img as ImageMetadata}
+            alt={project.data.img_alt || ''}
             loading="lazy"
-            decoding="async"
           />
           <h2 class="flex items-center mt-3">
             <a
               href={project.link}
               class="text-base font-bold leading-tight tracking-tight sm:text-lg dark:text-neutral-100"
             >
-              {project.title}
+              {project.data.title}
             </a>
             <IoArrowForward className="w-4 h-4 ml-1 opacity-0 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-200 ease-out" />
           </h2>
           <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-            <span>{project.description}</span>
+            <span>{project.data.description}</span>
           </p>
           <ul class="flex flex-wrap mt-3 gap-2">
-            {project.tags.map((tag:string) => ( // this line has an error; Parameter 'tag' implicitly has an 'any' type.ts(7006)
+            {project.data.tags.map((tag: string) => (
               <li class="bg-red-600/20 border-red-600/20 text-red-600 flex gap-1 items-center border-solid border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm">
                 {tag}
               </li>
             ))}
           </ul>
           <div class="mt-3 text-xs font-medium text-neutral-800 dark:text-neutral-300">
-            {project.dateFormatted}
+            {project.data.dateFormatted}
           </div>
         </div>
       </div>
