@@ -80,20 +80,6 @@ html.dark {
 	}
 }
 
-/* Cursor Effect */
-.cursor-follow {
-	position: fixed;
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	background: rgb(0, 0, 0, 0.2);
-	cursor: none;
-	pointer-events: none;
-}
-
-html.dark .cursor-follow {
-	background: rgb(255, 255, 255, 0.2);
-}
 
 /* Neon Text Style */
 .neon-title {
