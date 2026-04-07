@@ -12,7 +12,7 @@ tags:
   - DALL-E 3
 ---
 
-![tnap](/images/projects/tnap.webp)
+![tnap](../../assets/images/projects/tnap.webp)
 
 tnap is a screen saver for the terminal. You can rest the terminal in a secure.
 
