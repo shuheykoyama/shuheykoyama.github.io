@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 title: Portfolio Website
-img: /assets/images/projects/portfolio_thumbnail.webp
+img: ../../assets/images/projects/portfolio_thumbnail.webp
 img_alt: portfolio
 description: Shuhey's portfolio website
 dateFormatted: Dec 19th, 2024
@@ -13,7 +13,7 @@ tags:
   - TypeScript
 ---
 
-![portfolio_thumbnail](/assets/images/projects/portfolio_thumbnail.webp)
+![portfolio_thumbnail](../../assets/images/projects/portfolio_thumbnail.webp)
 
 A sleek and modern portfolio website showcasing my professional journey, projects, and creative pursuits. Built with Astro and React, featuring smooth animations and responsive design.
 
@@ -50,7 +50,7 @@ The website embodies three core principles:
 
 ## Screenshots
 
-![portfolio](/assets/images/projects/portfolio.webp)
+![portfolio](../../assets/images/projects/portfolio.webp)
 
 ## Source Code
 

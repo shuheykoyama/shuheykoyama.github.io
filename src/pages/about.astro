@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import AboutExperience from "../components/about-experience.astro";
 import PageHeading from "../components/page-heading.astro";
 import Layout from "../layouts/main.astro";
@@ -6,6 +7,27 @@ import experiences from "../collections/experiences.json";
 import skills from "../collections/skills.json";
 import * as Si from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import aboutImage from "../assets/images/about.webp";
+import logo01lab from "../assets/images/experiences/01lab.webp";
+import logoBonsaistudio from "../assets/images/experiences/bonsaistudio.webp";
+import logoDng from "../assets/images/experiences/dng.webp";
+import logoKsu from "../assets/images/experiences/ksu.webp";
+import logoSiggraph2022 from "../assets/images/experiences/siggraph2022.webp";
+import logoSiggraphasia2021 from "../assets/images/experiences/siggraphasia2021.webp";
+import logoSiggraphasia2022 from "../assets/images/experiences/siggraphasia2022.webp";
+import logoYokoito from "../assets/images/experiences/yokoito.webp";
+import type { ImageMetadata } from "astro";
+
+const logoMap: Record<string, ImageMetadata> = {
+  "/assets/images/experiences/01lab.webp": logo01lab,
+  "/assets/images/experiences/bonsaistudio.webp": logoBonsaistudio,
+  "/assets/images/experiences/dng.webp": logoDng,
+  "/assets/images/experiences/ksu.webp": logoKsu,
+  "/assets/images/experiences/siggraph2022.webp": logoSiggraph2022,
+  "/assets/images/experiences/siggraphasia2021.webp": logoSiggraphasia2021,
+  "/assets/images/experiences/siggraphasia2022.webp": logoSiggraphasia2022,
+  "/assets/images/experiences/yokoito.webp": logoYokoito,
+};
 ---
 
 <Layout title="ABOUT - Shuhey Koyama">
@@ -15,7 +37,7 @@ import { FaJava } from "react-icons/fa";
       description="Hello 👋 I'm an emerging HCI (Human-Computer Interaction) researcher and engineer based in Tsukuba, Japan. I'm passionate about exploring the relationship between people, computers, and space through sound. I'm a Vimmer and always interact with computers."
     />
 
-    <img src="/assets/images/about.webp" class="relative z-30 w-full mt-10 mb-14 rounded-xl" />
+    <Image src={aboutImage} alt="About" class="relative z-30 w-full mt-10 mb-14 rounded-xl" />
 
     <h2
       class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
@@ -61,7 +83,7 @@ import { FaJava } from "react-icons/fa";
                 role={experience.role}
                 company={experience.company}
                 description={experience.description}
-                logo={experience.logo}
+                logo={logoMap[experience.logo]}
               />
             </div>
           )

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 title: in the lights
-img: /assets/images/projects/in-the-lights.webp
+img: ../../assets/images/projects/in-the-lights.webp
 img_alt: in the lights
 description: Ueno snap with Sony α7Ⅱ + Wtulens L
 dateFormatted: Jun 6th, 2023
@@ -11,7 +11,7 @@ tags:
   - Premiere Pro
 ---
 
-![in the lights](/assets/images/projects/in-the-lights.webp)
+![in the lights](../../assets/images/projects/in-the-lights.webp)
 
 I bought a Wtulens I've been interested in for several years, and took these photos at Ueno, Tokyo. This lo-fi atmosphere is so cool.
 

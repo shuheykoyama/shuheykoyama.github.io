@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/project.astro
 title: The memory room
-img: /assets/images/projects/thememoryroom.webp
+img: ../../assets/images/projects/thememoryroom.webp
 img_alt: The memory room
 description: I will illuminate you with colors unique to me.
 dateFormatted: Sep 14th, 2021
@@ -13,7 +13,7 @@ tags:
   - Processing
 ---
 
-![The memory room](/assets/images/projects/thememoryroom.webp)
+![The memory room](../../assets/images/projects/thememoryroom.webp)
 
 "Gently encourage you. Color your heart."
 

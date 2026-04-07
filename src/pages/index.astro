@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Button from "../components/button.astro";
 import Projects from "../components/home/projects.astro";
 import Separator from "../components/home/separator.astro";
 import Layout from "../layouts/main.astro";
+import shuheyImage from "../assets/images/shuhey.webp";
 ---
 
 <Layout title="Shuhey Koyama">
@@ -63,8 +65,9 @@ import Layout from "../layouts/main.astro";
             </span>
           </div>
           <div class="relative z-30 px-10">
-            <img
-              src="/assets/images/shuhey.webp"
+            <Image
+              src={shuheyImage}
+              alt="Shuhey Koyama"
               loading="eager"
               decoding="auto"
               class="relative z-30 w-full h-full object-cover rounded-2xl"
