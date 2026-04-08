@@ -29,7 +29,7 @@ const sortedProjects = allProjects
 
 const projectsLoop = sortedProjects.slice(0, count).map((project) => ({
   data: project.data,
-  link: `/project/${project.slug}`,
+  link: `/project/${project.id}`,
 }));
 ---
 

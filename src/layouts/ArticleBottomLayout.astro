@@ -35,7 +35,7 @@ const next = items[(index + 1) % items.length];
 <div class="w-full max-w-2xl mx-auto">
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
     {prev && (
-    <a href={`/project/${prev.slug}`} class="group p-4 gap-5 flex items-center border rounded-lg hover:bg-neutral-600/5 hover:dark:bg-neutral-400/10 border-neutral-600/15 dark:border-neutral-400/20 duration-300 text-neutral-600 dark:text-neutral-400 blend no-underline">
+    <a href={`/project/${prev.id}`} class="group p-4 gap-5 flex items-center border rounded-lg hover:bg-neutral-600/5 hover:dark:bg-neutral-400/10 border-neutral-600/15 dark:border-neutral-400/20 duration-300 text-neutral-600 dark:text-neutral-400 blend no-underline">
         <div class="order-2 w-full h-full group-hover:text-black group-hover:dark:text-white blend">
           <div class="flex flex-wrap gap-2">
             <div class="text-sm">
@@ -53,7 +53,7 @@ const next = items[(index + 1) % items.length];
       </a>
     )}
     {next && (
-    <a href={`/project/${next.slug}`} class="group p-4 gap-5 flex items-center border rounded-lg hover:bg-neutral-600/5 hover:dark:bg-neutral-400/10 border-neutral-600/15 dark:border-neutral-400/20 duration-300 text-neutral-600 dark:text-neutral-400 blend no-underline">
+    <a href={`/project/${next.id}`} class="group p-4 gap-5 flex items-center border rounded-lg hover:bg-neutral-600/5 hover:dark:bg-neutral-400/10 border-neutral-600/15 dark:border-neutral-400/20 duration-300 text-neutral-600 dark:text-neutral-400 blend no-underline">
         <div class="w-full h-full text-right group-hover:text-black group-hover:dark:text-white blend">
           <div class="text-sm">
             Next
