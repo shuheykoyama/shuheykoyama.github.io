@@ -26,10 +26,10 @@ tnap is a screen saver for the terminal. You can rest the terminal in a secure.
 
 ## Screenshots
 
-<div class="grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2">
-  <img src="../../assets/images/projects/girl_with_headphone.webp" alt="girl_with_headphone" />
-  <img src="../../assets/images/projects/girl_with_headphone_ascii.webp" alt="girl_with_headphone_ascii" />
-</div>
+:::grid
+![girl_with_headphone](../../assets/images/projects/girl_with_headphone.webp)
+![girl_with_headphone_ascii](../../assets/images/projects/girl_with_headphone_ascii.webp)
+:::
 
 ## Demo Video
 

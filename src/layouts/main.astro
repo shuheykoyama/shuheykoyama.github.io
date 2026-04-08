@@ -29,6 +29,21 @@ const { title } = Astro.props;
         border-radius: 20px;
       }
     </style>
+    <style is:global>
+      .prose .image-grid > p {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        margin: 0;
+      }
+      .prose .image-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin: 0;
+        border-radius: 20px;
+      }
+    </style>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
