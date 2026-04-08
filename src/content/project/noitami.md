@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: noitami
 img: ../../assets/images/projects/noitami.webp
 img_alt: noitami

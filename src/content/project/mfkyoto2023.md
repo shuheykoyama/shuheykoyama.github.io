@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: MFKyoto 2023 Archive Video
 img: ../../assets/images/projects/mfkyoto2023.webp
 img_alt: Maker Faire Kyoto 2023 Archive Video

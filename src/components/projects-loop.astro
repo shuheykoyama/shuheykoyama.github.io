@@ -63,7 +63,7 @@ const projectsLoop = sortedProjects.slice(0, count).map((project) => ({
           </p>
           <ul class="flex flex-wrap mt-3 gap-2">
             {project.data.tags.map((tag: string) => (
-              <li class="bg-red-600/20 border-red-600/20 text-red-600 flex gap-1 items-center border-solid border rounded-md px-2 py-0.5 text-xs backdrop-blur-sm">
+              <li class="bg-red-600/20 border-red-600/20 text-red-600 flex gap-1 items-center border-solid border rounded-md px-2 py-0.5 text-xs backdrop-blur-xs">
                 {tag}
               </li>
             ))}

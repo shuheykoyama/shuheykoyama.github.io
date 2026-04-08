@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: Neovim Setup
 img: ../../assets/images/projects/neovim_thumbnail.webp
 img_alt: Neovim

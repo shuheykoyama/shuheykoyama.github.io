@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: solid to fluid
 img: ../../assets/images/projects/solid-to-fluid.webp
 img_alt: solid to fluid

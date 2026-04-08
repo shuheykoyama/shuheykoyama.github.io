@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: TouchTheLight
 img: ../../assets/images/projects/touchthelight.webp
 img_alt: TouchTheLight

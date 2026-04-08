@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: The memory room
 img: ../../assets/images/projects/thememoryroom.webp
 img_alt: The memory room
