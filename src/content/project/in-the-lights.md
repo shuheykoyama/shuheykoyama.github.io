@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: in the lights
 img: ../../assets/images/projects/in-the-lights.webp
 img_alt: in the lights

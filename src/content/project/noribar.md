@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: noribar
 img: ../../assets/images/projects/noribar.webp
 img_alt: noribar

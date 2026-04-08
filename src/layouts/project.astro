@@ -23,7 +23,7 @@ const { frontmatter } = Astro.props;
     >
       <div class="w-full max-w-2xl mx-auto mb-8">
         <a href="/projects" 
-          class="group w-fit p-1.5 gap-1.5 text-sm flex items-center border rounded hover:bg-neutral-600/5 hover:dark:bg-neutral-400/10 border-neutral-600/15 dark:border-neutral-400/20 transition-colors duration-300 ease-in-out text-neutral-600 dark:text-neutral-400"
+          class="group w-fit p-1.5 gap-1.5 text-sm flex items-center border rounded-sm hover:bg-neutral-600/5 dark:hover:bg-neutral-400/10 border-neutral-600/15 dark:border-neutral-400/20 transition-colors duration-300 ease-in-out text-neutral-600 dark:text-neutral-400"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props;
             stroke-width="2.5" 
             stroke-linecap="round" 
             stroke-linejoin="round" 
-            class="stroke-neutral-600 dark:stroke-neutral-400 group-hover:stroke-neutral-800 group-hover:dark:stroke-neutral-200"
+            class="stroke-neutral-600 dark:stroke-neutral-400 group-hover:stroke-neutral-800 dark:group-hover:stroke-neutral-200"
           >
             <line 
               x1="19" 
@@ -48,7 +48,7 @@ const { frontmatter } = Astro.props;
               class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out" 
             />
           </svg>
-          <span class="group-hover:text-neutral-800 group-hover:dark:text-neutral-200 transition-colors duration-300 ease-in-out">
+          <span class="group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors duration-300 ease-in-out">
             Back to Projects
           </span>
         </a>
@@ -67,7 +67,7 @@ const { frontmatter } = Astro.props;
 
       <ul class="w-full max-w-2xl mx-auto flex flex-wrap mt-4 md:mt-5 md:mb-5 gap-3">
         {frontmatter.tags.map((tag:string) => (
-          <li class="bg-red-600/20 border-red-600/20 text-red-600 flex gap-1 items-center border-solid border rounded-md px-2 py-0.5 text-sm backdrop-blur-sm">
+          <li class="bg-red-600/20 border-red-600/20 text-red-600 flex gap-1 items-center border-solid border rounded-md px-2 py-0.5 text-sm backdrop-blur-xs">
             {tag}
           </li>
         ))}

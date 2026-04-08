@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/project.astro
 title: Portfolio Website
 img: ../../assets/images/projects/portfolio_thumbnail.webp
 img_alt: portfolio
