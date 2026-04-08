@@ -6,7 +6,25 @@ export function remarkGridDirective() {
 			if (node.type === "containerDirective" && node.name === "grid") {
 				node.data = node.data || {};
 				node.data.hName = "div";
-				node.data.hProperties = { class: "image-grid" };
+
+				const existingProperties = node.data.hProperties || {};
+				const existingClassName =
+					existingProperties.className ?? existingProperties.class;
+				const className = Array.isArray(existingClassName)
+					? [...existingClassName]
+					: typeof existingClassName === "string" &&
+							existingClassName.length > 0
+						? existingClassName.split(/\s+/)
+						: [];
+
+				if (!className.includes("image-grid")) {
+					className.push("image-grid");
+				}
+
+				node.data.hProperties = {
+					...existingProperties,
+					className,
+				};
 			}
 		});
 	};

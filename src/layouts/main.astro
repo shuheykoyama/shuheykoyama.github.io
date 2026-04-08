@@ -32,9 +32,14 @@ const { title } = Astro.props;
     <style is:global>
       .prose .image-grid > p {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1.25rem;
         margin: 0;
+      }
+      @media (min-width: 640px) {
+        .prose .image-grid > p {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       .prose .image-grid img {
         width: 100%;
