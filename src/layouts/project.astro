@@ -2,19 +2,23 @@
 import Layout from "./main.astro";
 import ArticleBottomLayout from "../layouts/ArticleBottomLayout.astro";
 import { IoCalendarClearOutline } from "react-icons/io5";
+import type { ImageMetadata } from "astro";
+import type { CollectionEntry } from "astro:content";
 
 type Props = {
-  frontmatter: {
-    title: string;
-    dateFormatted: string;
-    tags: string[];
-  };
+  frontmatter: CollectionEntry<"project">["data"];
 }
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title} - Shuhey Koyama`}>
+<Layout
+  title={`${frontmatter.title} - Shuhey Koyama`}
+  description={frontmatter.description}
+  image={frontmatter.img as ImageMetadata}
+  imageAlt={frontmatter.img_alt ?? frontmatter.title}
+  ogType="article"
+>
   <main
     class="relative z-30 max-w-4xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900"
   >
