@@ -10,6 +10,7 @@
         "@tailwindcss/typography": "^0.5.15",
         "@tailwindcss/vite": "^4.2.2",
         "astro": "6.1.4",
+        "gen-interface-jp": "0.5.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-icons": "^5.4.0",
@@ -532,6 +533,8 @@
     "fontkitten": ["fontkitten@1.0.3", "", { "dependencies": { "tiny-inflate": "^1.0.3" } }, "sha512-Wp1zXWPVUPBmfoa3Cqc9ctaKuzKAV6uLstRqlR56kSjplf5uAce+qeyYym7F+PHbGTk+tCEdkCW6RD7DX/gBZw=="],
 
     "fsevents": ["fsevents@2.3.3", "", { "os": "darwin" }, "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="],
+
+    "gen-interface-jp": ["gen-interface-jp@0.5.0", "", {}, "sha512-tk7IDpnYPTcxOwmx81JjtQwTokkzINyJb+OuU2wEF2OoI4k17EFRMN77xxUfo/+7vaM7WMkEB7d/Vi+8BqacYA=="],
 
     "gensync": ["gensync@1.0.0-beta.2", "", {}, "sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg=="],
 
