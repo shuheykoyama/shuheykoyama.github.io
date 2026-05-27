@@ -2,7 +2,6 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
-import CursorEffect from "../components/cursor-effect.astro";
 import BaseHead from "../components/base-head.astro";
 import "../assets/css/main.css";
 // Gen Interface JP (Body & UI), weights matching site usage. Bundled at build
@@ -81,7 +80,6 @@ const { title, description, image, imageAlt, ogType, noindex } = Astro.props;
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950">
-    <CursorEffect />
     <SquareLines />
     <Header />
     <slot />
