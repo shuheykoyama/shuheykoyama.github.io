@@ -9,6 +9,7 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   ogType?: "website" | "article";
+  noindex?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   image,
   imageAlt = "Shuhey Koyama",
   ogType = "website",
+  noindex = false,
 } = Astro.props;
 
 const ogImage = await getImage({
@@ -37,7 +39,7 @@ const ogHeight = ogImage.attributes.height ?? ogImage.options.height ?? 630;
 
 <!-- SEO -->
 <meta name="description" content={description} />
-<link rel="canonical" href={canonicalURL} />
+{noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonicalURL} />}
 
 <!-- Open Graph -->
 <meta property="og:type" content={ogType} />
@@ -59,3 +61,4 @@ const ogHeight = ogImage.attributes.height ?? ogImage.options.height ?? 630;
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImageURL} />
+<meta name="twitter:image:alt" content={imageAlt} />

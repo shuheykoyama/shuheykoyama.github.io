@@ -3,7 +3,7 @@ import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
 import CursorEffect from "../components/cursor-effect.astro";
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead from "../components/base-head.astro";
 import "../assets/css/main.css";
 import type { ImageMetadata } from "astro";
 
@@ -13,9 +13,10 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   ogType?: "website" | "article";
+  noindex?: boolean;
 }
 
-const { title, description, image, imageAlt, ogType } = Astro.props;
+const { title, description, image, imageAlt, ogType, noindex } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,6 +31,7 @@ const { title, description, image, imageAlt, ogType } = Astro.props;
       image={image}
       imageAlt={imageAlt}
       ogType={ogType}
+      noindex={noindex}
     />
 
     <script is:inline>
