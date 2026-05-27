@@ -40,7 +40,7 @@ tnap is a screen saver for the terminal. You can rest the terminal in a secure.
     autoplay="autoplay"
     muted="muted"
     loop="loop"
-    ><source src="/assets/images/projects/tnap-demo.webm" type="video/mp4" />
+    ><source src="/assets/images/projects/tnap-demo.webm" type="video/webm" />
   </video>
 </div>
 
