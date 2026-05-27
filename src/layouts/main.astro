@@ -33,6 +33,7 @@ const { title, description, image, imageAlt, ogType, noindex } = Astro.props;
       ogType={ogType}
       noindex={noindex}
     />
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}fonts/gen-interface-jp/index.css`} />
 
     <script is:inline>
       if (typeof Storage !== 'undefined') {
